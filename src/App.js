@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { getData, getDataSearch } from "./services/Heroes";
+import { useEffect, useState } from "react";
+import Header from "./components/header/Header";
+import Footer from "./components/Footer";
+import ListHeroes from "./components/ListHeroes";
 
 function App() {
+  const [dataHeroes, setDataHeroes] = useState([]);
+  const [query, setQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (query === "") {
+      getData()
+        .then((data) => {
+          setDataHeroes(data.data.results);
+          setIsLoading(false);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      getDataSearch(query).then((data) => {
+        setDataHeroes(data.data.results);
+        setIsLoading(false);
+      });
+    }
+  }, [query]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header HandleSearch={setQuery} />
+      <ListHeroes heroes={dataHeroes} loading={isLoading} />
+      <Footer />
     </div>
   );
 }
