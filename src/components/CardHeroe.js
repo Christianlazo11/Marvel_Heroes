@@ -51,7 +51,12 @@ const CardHeroe = ({ title, img, id, urlDetails }) => {
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-primary">
-                <a href={urlDetails} target="_blank" className="link">
+                <a
+                  href={urlDetails}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link"
+                >
                   Go to Oficial Page
                 </a>
               </button>
