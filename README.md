@@ -15,8 +15,6 @@
 
     Free licence
 
-## Demo - https://wikimarvelheroes.netlify.app/
-
 ## Prerequisites
 
     1.- npm install npm@latest -g
@@ -34,3 +32,5 @@
     #### `npm run build`
 
     #### `npm run eject`
+
+## Demo - https://wikimarvelheroes.netlify.app/
