@@ -3,7 +3,7 @@
     A React Web Page Designed And Created For Christian Lazo
     Api used: https://developer.marvel.com/documentation/getting_started
 
-[![wikimarvelheroes-netlify-app-Desktop.png](https://i.postimg.cc/Jzh7RQJs/wikimarvelheroes-netlify-app-Desktop.png)](https://postimg.cc/0bL1fDVv)
+[![wikimarvelheroes.png](https://i.postimg.cc/wj59pF6s/wikimarvelheroes.png)](https://postimg.cc/87C2dRf1)
 
 ## Built With
 
